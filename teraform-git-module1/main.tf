@@ -15,7 +15,13 @@ resource "random_integer" "timeout" {
     run_id = var.run_id
   }
 }
-
+resource "random_uuid" "test2" {
+count = 5
+}
+output "uuid_out" {
+  value = random_uuid.test2[*].result
+sensitive = false
+}
 
 
 resource "null_resource" "env_vars" {
