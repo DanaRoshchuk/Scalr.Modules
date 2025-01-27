@@ -6,6 +6,9 @@ variable "run_id" {
 variable "sleep_time" {
   default = 60
 }
+resource "random_uuid" "test" {
+  count = 2
+}
 
 resource "random_integer" "timeout" {
   min = 32
