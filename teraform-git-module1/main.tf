@@ -7,7 +7,7 @@ variable "sleep_time" {
   default = 60
 }
 resource "random_uuid" "test" {
-  count = 2
+  count = 1
 }
 
 resource "random_integer" "timeout" {
