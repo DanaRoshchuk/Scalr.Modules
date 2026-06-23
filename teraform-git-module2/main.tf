@@ -25,14 +25,14 @@ output "pet_keeper" {
 }
 # repro-module/main.tf
 
-/*terraform {
+terraform {
   required_providers {
     onepassword = {
       source  = "1password/onepassword"
       version = "3.3.1"
     }
   }
-}*/
+}
 
 data "onepassword_vault" "test" {
   name = "Repro Vault"
